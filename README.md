@@ -11,7 +11,7 @@ A React-based capstone project developed by TS Academy frontend students as part
 | Prince Ubakaeze     |https://github.com/Prince-Ubakaeze|
 | Francis Akiti       |https://github.com/DevAkiti|
 | Akintunde Atoyebi   |https://github.com/Akintunde26|
-| Arabambi Mojoyinola |                  |
+| Arabambi Mojoyinola |https://github.com/mojoyinola03|
 | Uthman              |
 | Odejobi Samuel      |                  |
 |Fadahunsi Victor     |https://github.com/Vfadahunsi|
