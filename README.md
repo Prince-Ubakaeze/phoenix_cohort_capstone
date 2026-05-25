@@ -15,7 +15,7 @@ A React-based capstone project developed by TS Academy frontend students as part
 | Uthman              |
 | Odejobi Samuel      |                  |
 |Fadahunsi Victor     |https://github.com/Vfadahunsi|
-| Oke Israel          |                  |
+| Oke Israel          |https://github.com/Israeloke|
 
 ---
 
