@@ -13,7 +13,7 @@ A React-based capstone project developed by TS Academy frontend students as part
 | Akintunde Atoyebi   |https://github.com/Akintunde26|
 | Arabambi Mojoyinola |https://github.com/mojoyinola03|
 | Uthman              |https://github.com/uthmantemitayo123-lgtm|
-| Odejobi Samuel      |                  |
+| Odejobi Samuel      |https://github.com/Ayomilekan27|
 |Fadahunsi Victor     |https://github.com/Vfadahunsi|
 | Oke Israel          |https://github.com/Israeloke|
 
