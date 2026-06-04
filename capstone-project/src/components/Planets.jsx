@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
  
 // The live API that returns the 9 planets as a JSON array
-const API_URL = 'https://anurella.github.io/api/planets.json'
+const API_URL = 'https://anurella.github.io/planets.json'
  
 function Planets() {
   // planets: will hold the array of planet objects once fetched
