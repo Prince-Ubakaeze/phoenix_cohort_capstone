@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ── Page ── */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f0f4ff 0%, #e8eeff 40%, #edf1ff 100%);
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+
+/* ── Container ── */
+.planet-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 64px 24px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.planet-header {
+  text-align: center;
+  margin-bottom: 56px;
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #3a6fd8;
+  margin-bottom: 14px;
+  opacity: 0.75;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 800;
+  color: #0f1f5c;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.title-accent {
+  color: #2e5cd4;
+}
+
+.subtitle {
+  font-size: 15.5px;
+  font-weight: 300;
+  color: #3a4a78;
+  max-width: 560px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #3a6fd8, #8ab4ff);
+  border-radius: 99px;
+  margin: 0 auto;
+}
+
+/* ── Grid ── */
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(180, 200, 255, 0.4);
+  box-shadow: 0 6px 24px rgba(10, 20, 60, 0.18);
+  transform: translateY(0) scale(1);
+  transition: transform 0.28s cubic-bezier(.22,.68,0,1.2),
+              box-shadow 0.28s ease;
+  animation: cardIn 0.55s cubic-bezier(.22,.68,0,1.2) both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(32px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+
+/* ── Card Image ── */
+.card__img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(.22,.68,0,1.1);
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 47, 137, 0.45) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+}
+
+/* ── Card Info ── */
+.card__info {
+  padding: 16px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card__name {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f1f5c;
+  letter-spacing: -0.01em;
+}
+
+.card__distance {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #4a6199;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+}
+
+/* ── Skeleton ── */
+.skeleton {
+  height: 240px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #e2e8f8 25%, #eef2ff 50%, #e2e8f8 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+
+@media (max-width: 768px) {
+  .planet-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+}
