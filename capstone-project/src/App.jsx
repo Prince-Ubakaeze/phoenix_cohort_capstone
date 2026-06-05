@@ -1,9 +1,11 @@
 import React from 'react'
+import Footer from './footer'
+import './App.css'
 
 const App = () => {
   return (
     <>
-      <h1>Welcome you all</h1>
+    <Footer />
     </>
   )
 }
