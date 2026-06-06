@@ -4,9 +4,10 @@ function PlanetaryData() {
  
       {/* LEFT — video with play button overlay */}
       <div className='video-wrapper'>
-        <video autoPlay muted loop className='section-video'>
-          <source src='/space-video.mp4' type='video/mp4' />
-        </video>
+        {/* Background video — autoPlay muted loop required by the brief */}
+      <video autoPlay muted loop className='pvideo'>
+        <source src="https://media.istockphoto.com/id/144260690/video/complete-solar-system.mp4?s=mp4-640x640-is&k=20&c=as6u1-mEOcuDQQLqsCtAMOWRtvvYOF-5q0xrbIW5tTY=" type='video/mp4' />
+      </video>
         <div className='play-overlay'>
           <div className='play-icon'>&#9654;</div>
         </div>

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
  
 // The live API that returns the 9 planets as a JSON array
-const API_URL = 'https://anurella.github.io/planets.json'
+const API_URL = 'https://anurella.github.io/json/planets.json'
  
 function Planets() {
   // planets: will hold the array of planet objects once fetched
@@ -10,8 +10,30 @@ function Planets() {
   // error: holds an error message if something goes wrong
   const [planets, setPlanets] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError]     = useState(null)
- 
+  const [error, setError] = useState(null)
+
+  const PlanetCard = ({ planet, index }) => (
+    <div className="card">
+      <div className="card__img-wrap">
+        <img
+          src={planet.image}
+          alt={planet.planet}
+          className="card__img"
+          loading="lazy"
+        />
+        <div className="card__overlay" />
+        <div className="card__badge">{index + 1}</div>
+      </div>
+
+      <div className="card__info">
+        <span className="card__name">{planet.planet}</span>
+        <span className="card__distance">
+          {planet.distanceFromSun.toLocaleString()} million km from Sun
+        </span>
+      </div>
+    </div>
+  )
+
   // useEffect with [] runs this fetch ONCE when the component loads
   useEffect(() => {
     fetch(API_URL)
@@ -50,18 +72,7 @@ function Planets() {
       {!loading && !error && (
         <div className='planets-grid'>
           {planets.map((planet, index) => (
-            // <figure> is REQUIRED by the assignment brief
-            <figure key={index} className='planet-card'>
-              <img
-                src={planet.image}
-                alt={planet.planet}
-                className='planet-img'
-              />
-              <figcaption className='planet-caption'>
-                <h3>{planet.planet}</h3>
-                <p>{planet.distanceFromSun} million km from Sun</p>
-              </figcaption>
-            </figure>
+            <PlanetCard key={index} planet={planet} index={index} />
           ))}
         </div>
       )}
